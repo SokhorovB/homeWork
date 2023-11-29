@@ -1,7 +1,7 @@
 public class DataType {
     public static void main(String[] args) {
         int a = 100;
-        int b = 100;
+        int b = 99;
         double c = 10.1;
         double d = 10.1;
         byte e = 126;
