@@ -5,7 +5,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class searchTests {
+public class SearchTests {
     @Test
     void successfulSearchTest() {
 //        Configuration.holdBrowserOpen = true;
@@ -14,7 +14,7 @@ public class searchTests {
 
         open(url);
         $("[name=q]").setValue("selenide").pressEnter();
-        $("[id=search]").shouldHave(text("https://ru.selenide.org"));
+        $("#search").shouldHave(text("https://ru.selenide.org"));
     }
 
 //    @Test
