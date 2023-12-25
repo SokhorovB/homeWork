@@ -11,6 +11,9 @@ out
 
 ### Gradle ###
 .gradle
+settings.gradle
+build.gradle
+gradlew.bat
 
 ### Logs ###
 *.log
