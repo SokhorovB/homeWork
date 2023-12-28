@@ -67,7 +67,7 @@ public class ParametrizedTest {
 
 
 
-    static Stream<Arguments> MethodStream(){
+    static Stream<Arguments> methodStream(){
         return Stream.of(
                 Arguments.of(Language.EN, List.of("Quick start", "Docs", "FAQ", "Blog", "Javadoc", "Users", "Quotes")),
                 Arguments.of(Language.RU, List.of("С чего начать?", "Док", "ЧАВО", "Блог", "Javadoc", "Пользователи", "Отзывы"))
