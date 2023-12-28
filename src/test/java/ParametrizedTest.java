@@ -32,7 +32,7 @@ public class ParametrizedTest {
     @ParameterizedTest
     @Tag("ValueSource")
     @DisplayName("ValueSource")
-    public void valueSource(String searchQuery){
+    public void valueSourceTest(String searchQuery){
         open("https://duckduckgo.com/");
         $("#searchbox_input").setValue(searchQuery).pressEnter();
         $$("[data-testid='mainline'] li[data-layout='organic']")
@@ -46,7 +46,7 @@ public class ParametrizedTest {
     @ParameterizedTest
     @Tag("CsvSource")
     @DisplayName("CsvSource")
-    public void CsvSource(String searchQuery, String expectedLink){
+    public void csvSourceTest(String searchQuery, String expectedLink){
         open("https://duckduckgo.com/");
         $("#searchbox_input").setValue(searchQuery).pressEnter();
         $("[data-testid='mainline'] li[data-layout='organic']")
@@ -58,7 +58,7 @@ public class ParametrizedTest {
     @ParameterizedTest
     @Tag("EnumSource")
     @DisplayName("EnumSource")
-    public void EnumSource(Language language){
+    public void enumSourceTest(Language language){
 
         open("https://ru.selenide.org/");
         $$("#languages a").find(text(language.name())).click();
@@ -77,7 +77,7 @@ public class ParametrizedTest {
     @ParameterizedTest
     @Tag("MethodSource")
     @DisplayName("MethodSource")
-    void MethodStream(Language language, List<String> expectedButtons){
+    void methodStreamTest(Language language, List<String> expectedButtons){
         open("https://ru.selenide.org/");
         $$("#languages a").find(text(language.name())).click();
         $$(".main-menu-pages a").filter(visible).shouldHave(texts(expectedButtons));
